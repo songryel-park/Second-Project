@@ -1,7 +1,7 @@
 
 public class bus {
 	int num;
-	String State;
+	String state;
 	int pas;
 	int maxpas;
 	int oil;
