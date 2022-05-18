@@ -28,7 +28,7 @@ public class taxi {
 	}
 	
 	public taxi(int num) {
-		this(num, 0, 0, "Â÷°íÁö", "", 0, 0, 0, 0, 0);
+		this(num, 0, 0, "ì°¨ê³ ì§€", "", 0, 0, 0, 0, 0);
 	}
 	
 	public void start(int oil) {
@@ -37,7 +37,7 @@ public class taxi {
 			this.oil = oil;
 		} else {
 			this.oil = oil;
-			System.out.println("ÁÖÀ¯·®À» È®ÀÎÇÏ¼¼¿ä");
+			System.out.println("ì£¼ìœ ëŸ‰ì„ í™•ì¸í•˜ì„¸ìš”");
 		}
 	}
 	
@@ -45,28 +45,28 @@ public class taxi {
 		if(state.equals("empty")) {
 			this.pas = pas;
 			if(pas > 0) {
-				this.state = "drive";
-				System.out.println("¿îÇàÁß");
+				this.state = "";
+				System.out.println("ìš´í–‰ì¤‘");
 			} else {
-				System.out.println("ºóÂ÷");
+				System.out.println("ë¹ˆì°¨");
 			}
 		} else {
-			System.out.println("Å¾½ÂºÒ°¡");
+			System.out.println("íƒ‘ìŠ¹ë¶ˆê°€");
 		}
 	}
 	
 	public void go(String station) {
 		if(station == "S") {
-			this.station = "¼­¿ï¿ª";
+			this.station = "ì„œìš¸ì—­";
 			amount = 100;
 		} else if(station == "H") {
-			this.station = "È«´ë";
+			this.station = "í™ëŒ€";
 			amount = 150;
 		} else if(station == "I") {
-			this.station = "ÀÎÃµ";
+			this.station = "ì¸ì²œ";
 			amount = 400;
 		} else if(station == "B") {
-			this.station = "ºÎ»ê";
+			this.station = "ë¶€ì‚°";
 			amount = 1000;
 		}
 	}
@@ -74,10 +74,10 @@ public class taxi {
 	public void convert(int speed) {
 		if(speed >= 0) {
 			this.speed += speed;
-			//System.out.println("ºü¸£°Ô");
+			//System.out.println("ë¹ ë¥´ê²Œ");
 		} else {
 			this.speed -= speed;
-			//System.out.println("´À¸®°Ô");
+			//System.out.println("ëŠë¦¬ê²Œ");
 		}
 	}
 	
