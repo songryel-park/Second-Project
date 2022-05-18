@@ -5,16 +5,20 @@ public class bus {
 	int num;
 	String state;
 	int pas;
+	int chPas;
+	int minPas;
 	int maxPas;
 	int oil;
 	int speed;
 	int age;
 	int price;
 	
-	public bus(int num, String state, int pas, int maxPas, int oil, int speed, int price) {
+	public bus(int num, String state, int pas, int chPas, int minPas, int maxPas, int oil, int speed, int price) {
 		this.num = num;
 		this.state = state;
 		this.pas = pas;
+		this.chPas = chPas;
+		this.minPas = minPas;
 		this.maxPas = maxPas;
 		this.oil = oil;
 		this.speed = speed;
@@ -22,7 +26,7 @@ public class bus {
 	}
 	
 	public bus(int num) {							// 버스번호 및 초기상태화
-		this(num, "운행", 0, 25, 100, 0, 0);
+		this(num, "운행", 0, 0, 25, 100, 0, 0);
 	}
 	
 	public void fuel(int oil) {						// 주유량에 따른 차량 상태
@@ -49,13 +53,15 @@ public class bus {
 	}
 	
 	public void runnig(int pas) {						// 인원수에 따른 차량 상태
-		if(pas >= maxPas) {
+		if(chpas+pas >= maxPas) {
+			this.pas = maxPas;
 			System.out.println("만차");
-		} else if(pas < 0) {
+		} else if(chpas+pas < 0) {
+			this.pas = minPas;
 			this.state = "차고지행";
 			System.out.println("운행 종료 - 차고지");
 		} else {
-			this.pas += pas;
+			this.pas += chpas;
 		}
 	}
 	
