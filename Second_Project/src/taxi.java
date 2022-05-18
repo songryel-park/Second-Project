@@ -103,7 +103,7 @@ public class taxi {
 		t1.start(11);
 		t1.take(7);
 		t1.go("I");
-		t1.convert(5);
+		t1.convert(10);
 		t1.convert(5);
 		t1.convert(-2);
 		t1.pay();
