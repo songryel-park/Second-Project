@@ -33,7 +33,7 @@ public class taxi {
 	
 	public void start(int oil) {
 		if(oil >= 10) {
-			this.state = "empty";
+			this.state = "빈차";
 			this.oil = oil;
 		} else {
 			this.oil = oil;
@@ -42,7 +42,7 @@ public class taxi {
 	}
 	
 	public void take(int pas) {
-		if(state.equals("empty")) {
+		if(state.equals("빈차")) {
 			this.pas = pas;
 			if(pas > 0) {
 				this.state = "목적지";
@@ -101,15 +101,15 @@ public class taxi {
 	public static void main(String[] args) {	
 		taxi t1 = new taxi(1);
 		t1.start(11);
-		t1.take(7);
-		t1.go("B");
+		t1.take(3);
+		t1.go("I");
 		t1.convert(10);
 		t1.convert(5);
 		t1.convert(-2);
 		t1.pay();
 		
 		System.out.println(t1.num + "번 택시/" + t1.oil + "L/" + t1.pas + "명 탑승/" 
-				+ t1.state + " " + t1.station + "까지" + " 거리 " + t1.amount + "km/" 
+				+ t1.state + " " + t1.station + "거리 " + t1.amount + "km/" 
 				+ "기본금 " + t1.price + "원" + " 추가금액 " + t1.addPrice + "원" + "총 결제액" + t1.total + "원");
 	}
 }
