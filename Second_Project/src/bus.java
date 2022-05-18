@@ -52,7 +52,7 @@ public class bus {
 		}
 	}
 	
-	public void runnig(int pas) {						// 인원수에 따른 차량 상태
+	public void runnig(int chpas) {						// 인원수에 따른 차량 상태
 		if(chpas+pas >= maxPas) {
 			this.pas = maxPas;
 			System.out.println("만차");
