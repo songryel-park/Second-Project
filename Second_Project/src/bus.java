@@ -22,38 +22,38 @@ public class bus {
 	}
 	
 	public bus(int num) {
-		this(num, "¿îÇà", 0, 25, 100, 0, 0);
+		this(num, "ìš´í–‰", 0, 25, 100, 0, 0);
 	}
 	
 	public void fuel(int oil) {
 		this.state = state;
 		if(oil < 10) {
 			this.oil = oil;
-			this.state = "Â÷°íÁöÇà";
-			System.out.println("ÁÖÀ¯·® È®ÀÎ - Â÷°íÁö");
+			this.state = "ì°¨ê³ ì§€í–‰";
+			System.out.println("ì£¼ìœ ëŸ‰ í™•ì¸ - ì°¨ê³ ì§€");
 		}
 		else {
 			this.oil = oil;
-			System.out.println("¿îÇàÁß");
+			System.out.println("ìš´í–‰ì¤‘");
 		}
 	}
 	
 	public void convert(int speed) {
 		if(speed >= 0) {
 			this.speed += speed;
-			//System.out.println("ºü¸£°Ô");
+			//System.out.println("ë¹ ë¥´ê²Œ");
 		} else {
 			this.speed += speed;
-			//System.out.println("´À¸®°Ô");
+			//System.out.println("ëŠë¦¬ê²Œ");
 		}
 	}
 	
 	public void runnig(int pas) {
 		if(pas >= maxPas) {
-			System.out.println("¸¸Â÷");
+			System.out.println("ë§Œì°¨");
 		} else if(pas < 0) {
-			this.state = "Â÷°íÁöÇà";
-			System.out.println("¿îÇà Á¾·á - Â÷°íÁö");
+			this.state = "ì°¨ê³ ì§€í–‰";
+			System.out.println("ìš´í–‰ ì¢…ë£Œ - ì°¨ê³ ì§€");
 		} else {
 			this.pas += pas;
 		}
@@ -75,12 +75,13 @@ public class bus {
 		bus b1 = new bus(1);
 		b1.fuel(31);
 		b1.runnig(7);
+		b1.runnig(11);
 		b1.convert(30);
 		b1.convert(10);
 		b1.convert(-5);
 		b1.pay(19);
 		
-		System.out.println(b1.num + "¹ø ¹ö½º " + "ÀÜ¿© ÁÖÀ¯·® " + b1.oil + "L " + "ÇöÀç " + b1.pas + "¸í Å¾½Â Áß "
-				+ "ÇöÀç ¼Óµµ "+ b1.speed + "km/h " + "¿ä±Ý " + b1.price + "¿ø");
+		System.out.println(b1.num + "ë²ˆ ë²„ìŠ¤ " + "ìž”ì—¬ ì£¼ìœ ëŸ‰ " + b1.oil + "L " + "í˜„ìž¬ " + b1.pas + "ëª… íƒ‘ìŠ¹ ì¤‘ "
+				+ "í˜„ìž¬ ì†ë„ "+ b1.speed + "km/h " + "ìš”ê¸ˆ " + b1.price + "ì›");
 	}
 }
