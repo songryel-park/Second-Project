@@ -83,18 +83,20 @@ public class taxi {
 	
 	public void pay() {							// 거리별 추가요금 변화
 		this.amount = amount;
-		if (amount <= 10) {
-	        price = 3000;
-	    } else if (amount > 10 && amount <= 50) {
-            addPrice = 50 * (amount-10);
-	    	price = 3000;
-	    } else if (amount > 50 && amount <= 100) {
-            addPrice = (50 * 40) + (200 * (amount-50));
-	    	price = 3000;
-	    } else {
-	    	addPrice = (50 * 40) + (200 * 50) + (1000 * (amount-100));
-	    	price = 3000;
-	    }
+		if (amount <= 0) {
+			price = 0;
+		} else if (amount <= 10) {
+	        	price = 3000;
+	   	} else if (amount > 10 && amount <= 50) {
+            		addPrice = 50 * (amount-10);
+	    		price = 3000;
+	    	} else if (amount > 50 && amount <= 100) {
+            		addPrice = (50 * 40) + (200 * (amount-50));
+	    		price = 3000;
+	    	} else {
+	    		addPrice = (50 * 40) + (200 * 50) + (1000 * (amount-100));
+	    		price = 3000;
+	    	}
 		total = (price + addPrice);
 	}
 	
