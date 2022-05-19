@@ -27,7 +27,7 @@ public class taxi {
 		this.total = total;
 	}
 	
-	public taxi(int num) {							// 택시 번호 및 
+	public taxi(int num) {							// 택시 번호 및 초기상태
 		this(num, 0, 0, "차고지", "", 0, 0, 0, 0, 0);
 	}
 	
