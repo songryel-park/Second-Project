@@ -41,7 +41,7 @@ public class taxi {
 		}
 	}
 	
-	public void take(int pas) {   						// 택시 상태
+	public void take(int pas) {   						// 택시 탑승 인원에 따른 상태 
 		if(state.equals("빈차")) {
 			this.pas = pas;
 			if(pas > 0) {
@@ -103,7 +103,7 @@ public class taxi {
 	public static void main(String[] args) {	
 		taxi t1 = new taxi(1); 						// 택시번호
 		t1.start(11); 							// 연료량 확인
-		t1.take(3); 							// 택시 상태 [빈차, 운행, 불가] 표시
+		t1.take(3); 							// 탑승인원 
 		t1.go("I"); 							// 목적지 기입
 		t1.convert(30); 
 		t1.convert(10);
